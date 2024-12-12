@@ -1,0 +1,149 @@
+/* COPYRIGHT (C) 2024 - SWATHYMOL SAJEEV | GNU General Public License v3.0
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, 
+either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful,but WITHOUT ANY WARRANTY; 
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    text-align: center;
+    font-family: monospace;
+    background: linear-gradient(to right, skyblue, aliceblue);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #eee9e9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stopwatch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.timer{
+    font-size: 3rem;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.05);
+    }
+}
+
+.timer span{
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+}
+
+.button-container{
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    width: 150px;
+    background-color: royalblue;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+button:hover{
+    background-color: dodgerblue;
+    animation: bounce 0.5s;
+}
+
+.lap-title{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.laps{
+    width: 100%;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 200px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+li{
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+li:last-child{
+    border-bottom: none;
+}
+
+li span{
+    font-weight: 700;
+}
+
+.footer {
+    font-family: sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+}
